@@ -46,7 +46,6 @@ namespace SortingAlgorithmTesting
                         sortedList[i] = temp2;
                         sortedList[i + 1] = temp1;
                         swapped = true;
-                        //if (swapped) Console.WriteLine("swap happened");
                     }
                 }
             } 
@@ -59,24 +58,6 @@ namespace SortingAlgorithmTesting
         public override string Stats()
         {
             StringBuilder sb = new StringBuilder("");
-
-            //sb.Append("Unsorted: ");
-            //foreach(int i in _unsortedList)
-            //{
-            //    sb.Append(i.ToString());
-            //    sb.Append(", ");
-            //}
-
-            //sb.AppendLine();
-
-            //sb.Append("  Sorted: ");
-            //foreach (int i in sortedList)
-            //{
-            //    sb.Append(i.ToString());
-            //    sb.Append(", ");
-            //}
-
-            //sb.AppendLine();
 
             TimeSpan timeTaken = stopwatch.Elapsed;
             sb.AppendLine("Operation took: " + timeTaken.ToString(@"ss\.ffffff") + " seconds to complete.");
