@@ -1,11 +1,11 @@
 # SortingAlgorithmTesting
 
-Here I am testing some implemtations of sorting algorithms that I am learning about in universty, as I am a current student.
+<p>Here I am testing some implemtations of sorting algorithms that I am learning about in universty, as I am a current student.</p>
 
-The time approximations will follow, and operation counters will be added as well.
+<p>The time approximations will follow, and operation counters will be added as well.</p>
 
-So far the types of algorithms tested are:
-Bubble Sort
-Double Selection
-Single Selection (as a comparitor)
+So far the types of algorithms tested are: </br>
+Bubble Sort</br>
+Double Selection</br>
+Single Selection (as a comparitor)</br>
 
