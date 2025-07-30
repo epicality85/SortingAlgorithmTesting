@@ -9,7 +9,7 @@ namespace SortingAlgorithmTesting
     internal class BubbleSortWOC : SortingAlgorithmBase
     {
         private int[] sortedList;
-        private int _operations;
+        private long _operations;
 
         public BubbleSortWOC(int listLength) : base(listLength)
         {
@@ -39,6 +39,8 @@ namespace SortingAlgorithmTesting
                         sortedList[i] = temp2;
                         sortedList[i + 1] = temp1;
                         swapped = true;
+
+                        _operations++;
                     }
                 }
                 _operations++;

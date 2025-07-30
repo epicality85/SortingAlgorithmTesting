@@ -35,7 +35,7 @@ namespace SortingAlgorithmTesting
                 for (int i = 0; i < sortedList.Length - 1; i++)
                 {
                     int temp1 = sortedList[i];
-                    int temp2 = sortedList[i + 1];
+                    int temp2 = sortedList[i + 1]; // this may be further simplified, for readability, its kept
                     if (temp1 > temp2)
                     {
                         sortedList[i] = temp2;

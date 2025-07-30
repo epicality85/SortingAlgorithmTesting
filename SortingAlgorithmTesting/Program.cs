@@ -7,21 +7,34 @@ namespace SortingAlgorithmTesting
         private static bool _isExiting = false;
         private static bool _isExecuting = false;
 
-        private static List<SortingAlgorithmBase>? sortingMethods;
+        private static List<SortingAlgorithmBase> sortingMethods = new();
+        private static int[] listLengths = { 10, 100, 1000, 10000, 100000};//, 1000000 };
 
-        static void Init(int _listLength)
+        static bool Init()
         {
-            sortingMethods = new List<SortingAlgorithmBase>()
+            for (int i = 0; i < listLengths.Length; i++)
             {
-                //new SingleSelection(_listLength),
-                //new SingleSelectionWOC(_listLength),
-                new BubbleSort(_listLength),
-                new BubbleSortWOC(_listLength),
-                //new DoubleSelection(_listLength),
-                //new DoubleSelectionWOC(_listLength)
-            };
+                sortingMethods.Add(new BubbleSort(listLengths[i]));
+            }
+
+            for (int i = 0; listLengths.Length > i; i++)
+            {
+                sortingMethods.Add(new BubbleSortWOC(listLengths[i]));
+            }
+
+            for (int i = 0; i < listLengths.Length; i++)
+            {
+                sortingMethods.Add(new SingleSelection(listLengths[i]));
+            }
+
+            for (int i = 0; listLengths.Length > i; i++)
+            {
+                sortingMethods.Add(new SingleSelectionWOC(listLengths[i]));
+            }
 
             _isExecuting = true;
+
+            return true;
         }
 
         static void Main(string[] args)
@@ -33,19 +46,28 @@ namespace SortingAlgorithmTesting
 
             while (!_isExiting && !_isExecuting)
             {
-                Console.WriteLine("How many items would you like to test in the list? ");
-                int listLength = 0;
-                listLength = int.Parse(Console.ReadLine());
-
-                if (listLength > 0)
+                if(Init())
                 {
-                    Init(listLength);
+                    _isExecuting = true;
                 }
                 else
                 {
-                    _isExecuting = true;
+                    _isExiting = true;
                     break;
                 }
+                //Console.WriteLine("How many items would you like to test in the list? ");
+                //int listLength = 0;
+                //listLength = int.Parse(Console.ReadLine());
+
+                //if (listLength > 0)
+                //{
+                //    Init(listLength);
+                //}
+                //else
+                //{
+                //    _isExecuting = true;
+                //    break;
+                //}
             }
 
             if (_isExiting)
