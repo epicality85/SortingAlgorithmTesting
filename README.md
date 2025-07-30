@@ -4,8 +4,20 @@
 
 <p>The time approximations will follow, and operation counters will be added as well.</p>
 
-So far the types of algorithms tested are: </br>
+<p>So far the types of algorithms tested are: </br>
 Bubble Sort</br>
 Double Selection</br>
-Single Selection (as a comparitor)</br>
+Single Selection (as a comparitor)</br></p>
+
+<h3>Here are the values in a table</h3>
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
