@@ -12,12 +12,12 @@ Single Selection (as a comparitor)</br></p>
 <h3>Here are the values in a table</h3>
 <table>
   <tr>
-    <th></th>
-    <th></th>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <th>Algorithm</th>
+    <th>10</th>
+    <td>100</td>
+    <td>1,000</td>
+    <td>10,000</td>
+    <td>100,000</td>
   </tr>
 </table>
 
