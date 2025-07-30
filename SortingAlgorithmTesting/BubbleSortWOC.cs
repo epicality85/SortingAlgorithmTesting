@@ -1,21 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SortingAlgorithmTesting
 {
-    internal class BubbleSort : SortingAlgorithmBase
+    internal class BubbleSortWOC : SortingAlgorithmBase
     {
         private int[] sortedList;
-        private Stopwatch _stopwatch;
+        private int _operations;
 
-        public BubbleSort(int listLength) : base(listLength) 
+        public BubbleSortWOC(int listLength) : base(listLength)
         {
             sortedList = new int[listLength];
-            _stopwatch = new Stopwatch();
+            _operations = 0;
         }
 
         public override void Init()
@@ -26,14 +25,13 @@ namespace SortingAlgorithmTesting
 
         public override void Sort()
         {
-            _stopwatch.Start();
-
             bool swapped = false;
             do
             {
                 swapped = false;
                 for (int i = 0; i < sortedList.Length - 1; i++)
                 {
+                    _operations++;
                     int temp1 = sortedList[i];
                     int temp2 = sortedList[i + 1];
                     if (temp1 > temp2)
@@ -43,19 +41,17 @@ namespace SortingAlgorithmTesting
                         swapped = true;
                     }
                 }
-            } 
+                _operations++;
+            }
             while (swapped != false);
-
-            _stopwatch.Stop();
         }
 
         public override string Stats()
         {
             StringBuilder sb = new StringBuilder("");
 
-            TimeSpan timeTaken = _stopwatch.Elapsed;
-            sb.AppendLine("Bubble Sort stats:");
-            sb.AppendLine("Operation took: " + timeTaken.ToString(@"ss\.ffffff") + " seconds to complete.");
+            sb.AppendLine("Bubble Sort (with ops counter) stats:");
+            sb.AppendLine("Operation took: " + _operations + " operations to complete.");
 
             return sb.ToString();
         }

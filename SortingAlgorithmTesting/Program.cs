@@ -7,14 +7,18 @@ namespace SortingAlgorithmTesting
         private static bool _isExiting = false;
         private static bool _isExecuting = false;
 
-        private static List<SortingAlgorithmBase> sortingMethods;
+        private static List<SortingAlgorithmBase>? sortingMethods;
 
         static void Init(int _listLength)
         {
             sortingMethods = new List<SortingAlgorithmBase>()
             {
+                //new SingleSelection(_listLength),
+                //new SingleSelectionWOC(_listLength),
                 new BubbleSort(_listLength),
-                new DoubleSelection(_listLength)
+                new BubbleSortWOC(_listLength),
+                //new DoubleSelection(_listLength),
+                //new DoubleSelectionWOC(_listLength)
             };
 
             _isExecuting = true;
