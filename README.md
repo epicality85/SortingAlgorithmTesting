@@ -21,19 +21,19 @@ Single Selection (as a comparitor)</br></p>
   </tr>
   <tr>
     <td>Single Selection (t)</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>0.000000s</td>
+    <td>0.000015s</td>
+    <td>0.000944s</td>
+    <td>0.091569s</td>
+    <td>9.308803s</td>
   </tr>
   <tr>
     <td>Single Selection (O)</td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>61</td>
+    <td>5,142</td>
+    <td>501,492</td>
+    <td>50,014,990</td>
+    <td>5,000,149,989</td>
   </tr>
   <tr>
     <td>Double Selection (t)</td>
@@ -53,19 +53,19 @@ Single Selection (as a comparitor)</br></p>
   </tr>
   <tr>
     <td>Bubble Sort (t)</td>
-    <td>0.000002s</td>
-    <td>0.000046s</td>
-    <td>0.002746s</td>
-    <td>0.259937s</td>
-    <td>32.913558s</td>
+    <td>0.000003s</td>
+    <td>0.000030s</td>
+    <td>0.002487s</td>
+    <td>0.274077s</td>
+    <td>33.293946s</td>
   </tr>
   <tr>
     <td>Bubble Sort (O)</td>
-    <td>60</td>
-    <td>9,800</td>
-    <td>955,000</td>
-    <td>95,050,000</td>
-    <td>929,965,408</td>
+    <td>127</td>
+    <td>12,335</td>
+    <td>122,7397</td>
+    <td>122,601,512</td>
+    <td>12,240,495,455</td>
   </tr>
 </table>
 
